@@ -68,7 +68,7 @@ public class CustomGuiceModule extends DefaultModule {
         final DataUpdater updater = new DataUpdater(getGraphHopper(), lock.writeLock());
         bind(DataUpdater.class).toInstance(updater);
         // start update thread
-        updater.start();
+        // updater.start();
         
         bind(ObjectMapper.class).toInstance(createMapper());
         ObjectMapper prettyOM = createMapper();
